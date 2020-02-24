@@ -16,20 +16,24 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools_scm
+    - toml
   run:
-    - contextlib2
     - tox
     - tox-venv
     - virtualenv
-    - path.py
-    - python
+    - path
+    - python >=3.6
 
 test:
+  requires:
+    - pip
   imports:
     - jaraco.envs
+  commands:
+    - pip check
 
 about:
   home: https://github.com/jaraco/jaraco.envs
