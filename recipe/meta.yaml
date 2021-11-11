@@ -1,5 +1,5 @@
 {% set name = "jaraco.envs" %}
-{% set version = "2.1.1" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b40723ae23833e54f2183cfd4b64dcf73ec7f61f24935b9f2d2e227e524e40ba
+  sha256: f204a3e16f7d2f900f4d2c01b167e6540bebdd7798128b585f14b3410c83e5d8
 
 build:
   noarch: python
@@ -18,8 +18,6 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - setuptools_scm
-    - toml
   run:
     - tox
     - tox-venv
