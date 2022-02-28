@@ -1,13 +1,12 @@
-{% set name = "jaraco.envs" %}
-{% set version = "2.2.0" %}
+{% set version = "2.3.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: jaraco.envs
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f204a3e16f7d2f900f4d2c01b167e6540bebdd7798128b585f14b3410c83e5d8
+  url: https://pypi.io/packages/source/j/jaraco.envs/jaraco.envs-{{ version }}.tar.gz
+  sha256: ce9527140aa45d50d9a2dc0e6565078b864e41ed6848867a3ddf48da9abbe313
 
 build:
   noarch: python
@@ -16,14 +15,14 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
     - tox
     - tox-venv
-    - virtualenv
     - path
-    - python >=3.6
+    - python >=3.7
+    - virtualenv
 
 test:
   requires:
