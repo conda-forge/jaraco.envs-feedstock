@@ -1,4 +1,4 @@
-{% set version = "2.3.0" %}
+{% set version = "2.4.0" %}
 
 package:
   name: jaraco.envs
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jaraco.envs/jaraco.envs-{{ version }}.tar.gz
-  sha256: ce9527140aa45d50d9a2dc0e6565078b864e41ed6848867a3ddf48da9abbe313
+  sha256: 0d88351e2575d4fd8fd8039715572acee1cd074fbdfc1c017e4c1970b4af44f8
 
 build:
   noarch: python
