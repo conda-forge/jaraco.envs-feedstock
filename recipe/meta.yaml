@@ -11,17 +11,16 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - tox
-    - tox-venv
     - path
-    - python >=3.7
+    - python >=3.8
+    - tox
     - virtualenv
 
 test:
